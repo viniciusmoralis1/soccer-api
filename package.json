@@ -1,0 +1,17 @@
+{
+  "name": "soccer-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ViniciusMoralis1/soccer-api.git",
+  "author": "Vinicius Moralis <vinicius_moralis@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "yarn nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
