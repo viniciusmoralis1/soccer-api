@@ -9,6 +9,9 @@ function chamada(response, tipo){
   } else if(tipo == 'bra'){
     var url = "http://api.football-data.org/v2/competitions/2013/teams";
   }
+  else if(tipo == 'uel'){
+    var url = "http://api.football-data.org/v2/competitions/2146/teams";
+  }
   var apiKey = "9748c352c8d847569d6b752d90f6ceaf";
 
   var options = {
@@ -33,14 +36,20 @@ function chamada(response, tipo){
   apiRequest.end();
 };
 
-routes.get('/teams', (request, response) => {
+routes.get('/ucl', (request, response) => {
   var tipo = "ucl";
 
   chamada(response, tipo);
 });
 
-routes.get('/competition', (request, response) => {
+routes.get('/bra', (request, response) => {
   var tipo = "bra";
+  
+  chamada(response, tipo);
+});
+
+routes.get('/uel', (request, response) => {
+  var tipo = "uel";
   
   chamada(response, tipo);
 });
