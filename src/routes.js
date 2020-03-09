@@ -9,8 +9,14 @@ function chamada(response, tipo){
   } else if(tipo == 'bra'){
     var url = "http://api.football-data.org/v2/competitions/2013/teams";
   }
-  else if(tipo == 'uel'){
-    var url = "http://api.football-data.org/v2/competitions/2146/teams";
+  else if(tipo == 'plp'){
+    var url = "http://api.football-data.org/v2/competitions/2017/teams";
+  }
+  else if(tipo == 'prl'){
+    var url = "http://api.football-data.org/v2/competitions/2021/teams";
+  }
+  else if(tipo == 'lls'){
+    var url = "http://api.football-data.org/v2/competitions/2014/teams";
   }
   var apiKey = "9748c352c8d847569d6b752d90f6ceaf";
 
@@ -48,10 +54,23 @@ routes.get('/bra', (request, response) => {
   chamada(response, tipo);
 });
 
-routes.get('/uel', (request, response) => {
-  var tipo = "uel";
+routes.get('/plp', (request, response) => {
+  var tipo = "plp";
   
   chamada(response, tipo);
 });
+
+routes.get('/prl', (request, response) => {
+  var tipo = "prl";
+  
+  chamada(response, tipo);
+});
+
+routes.get('/lls', (request, response) => {
+  var tipo = "lls";
+  
+  chamada(response, tipo);
+});
+
 
 module.exports = routes;
